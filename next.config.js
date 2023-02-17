@@ -1,11 +1,22 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
+  pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   experimental: {
     appDir: true,
     mdxRs: true
   },
-  pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
+  images: {
+    dangerouslyAllowSVG: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'tailwindui.com',
+        port: '',
+        pathname: '/img/logos/**'
+      }
+    ]
+  },
   reactStrictMode: true
 };
 
