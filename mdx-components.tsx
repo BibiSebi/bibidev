@@ -6,7 +6,11 @@ import { MDXComponents } from 'mdx/types';
 import { ReactNode } from 'react';
 
 function H1({ children }: { children: ReactNode }) {
-  return <h1>{children}</h1>;
+  return (
+    <h1 className="text-2xl font-extrabold tracking-tight text-slate-900 dark:text-slate-200 md:text-3xl ">
+      {children}
+    </h1>
+  );
 }
 
 function H2({ children }: { children: ReactNode }) {
