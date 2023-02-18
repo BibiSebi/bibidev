@@ -8,7 +8,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
         <div className="group flex text-sm font-semibold leading-6 text-slate-700 hover:text-slate-900 dark:text-slate-200 dark:hover:text-white">
           <a
             className="group flex text-sm font-semibold leading-6 text-slate-700 hover:text-slate-900 dark:text-slate-200 dark:hover:text-white"
-            href="/blog"
+            href="/"
           >
             <ChevronLeftIcon className="h-6" />
             Go back
