@@ -19,8 +19,8 @@ const Menu = () => {
         aria-label="Navigation Menu"
       >
         <div className="flex lg:flex-1">
-          <a href="/Users/bibianasebestianova/Public" className="-m-1.5 p-1.5">
-            <MainLogo />
+          <a href="/" className="-m-1.5 p-1.5">
+            Logo Placeholder 
           </a>
         </div>
         <div className="flex lg:hidden">
