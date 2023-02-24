@@ -1,7 +1,9 @@
 import { ReactNode } from 'react';
 import { ChevronLeftIcon } from '@heroicons/react/20/solid';
 
-const Layout = ({ children }: { children: ReactNode }) => {
+type LayoutFun = (props: { children: ReactNode }) => JSX.Element;
+
+const Layout: LayoutFun = ({ children }) => {
   return (
     <div className={'relative px-6 text-gray-800 lg:px-8'}>
       <div className="flex px-4 pt-8 pb-10 lg:px-8">
@@ -15,8 +17,11 @@ const Layout = ({ children }: { children: ReactNode }) => {
           </a>
         </div>
       </div>
-
-      {children}
+      <main>
+        <article className="mx-auto max-w-3xl pb-28">
+          <div className="prose prose-slate dark:prose-dark">{children}</div>
+        </article>
+      </main>
     </div>
   );
 };

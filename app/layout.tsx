@@ -9,10 +9,10 @@ export default function RootLayout({
   return (
     <html>
       <head />
-      <body className="overflow-hidden bg-white font-sans antialiased">
+      <body className="bg-white font-sans antialiased">
         <div className="isolate ">
           <Menu />
-          <main>{children}</main>
+          {children}
         </div>
       </body>
     </html>

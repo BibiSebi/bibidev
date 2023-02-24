@@ -1,9 +1,5 @@
-import HelloWorld from './hello.mdx';
+import ExampleBlog from './ExampleBlog.mdx';
 
 export default function Page() {
-  return (
-    <div className="mx-auto max-w-3xl pb-28">
-      <HelloWorld />
-    </div>
-  );
+  return <ExampleBlog />;
 }
