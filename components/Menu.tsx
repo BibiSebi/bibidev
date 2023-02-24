@@ -19,7 +19,7 @@ const Menu = () => {
         aria-label="Navigation Menu"
       >
         <div className="flex lg:flex-1">
-          <a href="/" className="-m-1.5 p-1.5">
+          <a href="/Users/bibianasebestianova/Public" className="-m-1.5 p-1.5">
             <MainLogo />
           </a>
         </div>
@@ -48,7 +48,7 @@ const Menu = () => {
       <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <Dialog.Panel className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden">
           <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
+            <a href="@/app/components/Menu#" className="-m-1.5 p-1.5">
               <MainLogo />
             </a>
             <button

@@ -1,5 +1,3 @@
-import ExampleBlog from './ExampleBlog.mdx';
-
 export default function Page() {
-  return <ExampleBlog />;
+  return <span> 🚧 Blog Overview 🚧</span>;
 }
