@@ -2,7 +2,6 @@
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
 import { Dialog } from '@headlessui/react';
-import MainLogo from '@/components/icons/MainLogo';
 
 const navigation = [
   { name: 'About me', href: '/about' },
@@ -20,7 +19,7 @@ const Menu = () => {
       >
         <div className="flex lg:flex-1">
           <a href="/" className="-m-1.5 p-1.5">
-            Logo Placeholder 
+            Logo Placeholder
           </a>
         </div>
         <div className="flex lg:hidden">
@@ -48,9 +47,6 @@ const Menu = () => {
       <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <Dialog.Panel className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden">
           <div className="flex items-center justify-between">
-            <a href="@/app/components/Menu#" className="-m-1.5 p-1.5">
-              <MainLogo />
-            </a>
             <button
               type="button"
               className="-m-2.5 rounded-md p-2.5 text-gray-700"
