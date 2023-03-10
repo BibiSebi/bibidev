@@ -1,8 +1,4 @@
-export type Author = {
-  name: string;
-  twitter: string;
-  twitterLink: string;
-};
+import { Author } from '@/types/Blog';
 
 type AuthorCardProps = {
   author: Author;

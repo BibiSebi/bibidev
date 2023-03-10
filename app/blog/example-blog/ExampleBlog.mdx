@@ -1,11 +1,10 @@
-import AuthorCard from '@/app/blog/_components/AuthorCard';
 import {meta} from "@/app/blog/example-blog/meta";
+import BlogHeader from "@/app/blog/_components/BlogHeader";
 
 # MDX Example Page
 
-<div className="mt-6">
-  <AuthorCard author={meta.author} />
-</div>
+
+<BlogHeader author={meta.author}  publishedOn={new Date()}/>
 
 This is a list in markdown:
 - One
