@@ -1,4 +1,4 @@
-import ExampleBlog from './_blogs/ExampleBlog.mdx';
+import ExampleBlog from './ExampleBlog.mdx';
 
 export default function Page() {
   return <ExampleBlog />;
