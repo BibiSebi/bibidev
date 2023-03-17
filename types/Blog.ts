@@ -1,6 +1,7 @@
 export type BlogMetaData = {
+  title: string;
   author: Author;
-  publishedOn: Date;
+  publishedOn: Date | string;
 };
 
 export type Author = {
