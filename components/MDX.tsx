@@ -26,7 +26,10 @@ export const components = {
       className="not-prose relative my-[2em] overflow-hidden rounded-lg first:mt-0 last:mb-0"
     />
   ),
-  p: ({ ...props }) => <p className="mt-5 mb-5" {...props} />
+  p: ({ ...props }) => <p className="mt-5 mb-5" {...props} />,
+  code: ({ ...props }) => (
+    <code className="rounded border bg-zinc-300 bg-opacity-25 p-1" {...props} />
+  )
 };
 
 interface MdxProps {
