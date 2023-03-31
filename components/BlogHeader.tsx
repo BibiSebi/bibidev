@@ -1,4 +1,4 @@
-import AuthorCard from '@/app/blogs/_components/AuthorCard';
+import AuthorCard from '@/components/AuthorCard';
 import { Author } from '@/types/Blog';
 
 type BlogHeaderProps = { author: Author; publishedOn: Date };

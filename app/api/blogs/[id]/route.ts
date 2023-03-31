@@ -7,6 +7,6 @@ type BlogContext = Context<{
 }>;
 
 export async function GET(request: NextApiRequest, { params }: BlogContext) {
-  //TODO: add functionality to find if blog id is available inside _blogs folder
+  //TODO: add functionality to find if blog id is available inside blogs folder
   return NextResponse.json({});
 }
