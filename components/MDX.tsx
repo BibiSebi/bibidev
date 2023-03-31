@@ -1,5 +1,4 @@
 import { useMDXComponent } from 'next-contentlayer/hooks';
-import { Component } from 'mdx/types';
 
 export const components = {
   h1: ({ ...props }) => (
