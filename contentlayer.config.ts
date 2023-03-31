@@ -17,6 +17,11 @@ const Blog = defineDocumentType(() => ({
       type: 'date',
       description: 'The date of the post',
       required: true
+    },
+    description: {
+      type: 'string',
+      description: 'Short description of the blog',
+      required: true
     }
   },
 
@@ -24,6 +29,11 @@ const Blog = defineDocumentType(() => ({
     slug: {
       type: 'string',
       resolve: (doc) => doc._raw.flattenedPath.split('/').slice(1).join('/')
+    },
+    url: {
+      type: 'string',
+      resolve: (doc) =>
+        `blog/${doc._raw.flattenedPath.split('/').slice(1).join('/')}`
     }
   }
 }));
