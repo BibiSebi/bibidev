@@ -1,26 +1,21 @@
-import { allBlogs } from 'contentlayer/generated';
+import { allBlogs, Blog } from 'contentlayer/generated';
 import { notFound } from 'next/navigation';
 import { parseISO, format } from 'date-fns';
+import BlogCard from '@/components/blog/BlogCard';
+import BlogCardList from '@/components/blog/BlogCardList';
 
 export default function Page() {
   if (!allBlogs || allBlogs.length <= 0) {
     notFound();
   }
+
+  const sortBlogsByDate = (blogs: Blog[]) => {
+    return blogs.sort((a, b) => (a.date > b.date ? -1 : 1));
+  };
+
   return (
     <div>
-      {allBlogs.map((blog, idx) => (
-        <a
-          className={'flex flex-col rounded border p-4'}
-          key={idx}
-          href={blog.url}
-        >
-          <span>{blog.title}</span>
-          <time dateTime={blog.date}>
-            {format(parseISO(blog.date), 'dd/MM/yyy')}
-          </time>
-          <span>{blog.description}</span>
-        </a>
-      ))}
+      <BlogCardList allBlogs={sortBlogsByDate(allBlogs)} />
     </div>
   );
 }
