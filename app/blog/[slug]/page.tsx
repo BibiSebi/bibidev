@@ -17,10 +17,8 @@ export default async function PostPage({ params }: Props) {
   }
 
   return (
-    <div>
-      <article>
-        <MDX code={blog.body.code} />
-      </article>
-    </div>
+    <article className="mx-auto max-w-3xl pb-28">
+      <MDX code={blog.body.code} />
+    </article>
   );
 }

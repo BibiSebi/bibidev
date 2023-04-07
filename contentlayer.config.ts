@@ -22,6 +22,13 @@ const Blog = defineDocumentType(() => ({
       type: 'string',
       description: 'Short description of the blog',
       required: true
+    },
+    tags: {
+      type: 'list',
+      of: { type: 'string' },
+      description: 'Topics of the blog',
+      required: false,
+      default: []
     }
   },
 
