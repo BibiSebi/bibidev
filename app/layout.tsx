@@ -10,7 +10,7 @@ export default function RootLayout({
     <html>
       <head />
       <body className="bg-white font-sans antialiased">
-        <div className="isolate ">
+        <div className="isolate min-h-screen flex flex-col">
           <Menu />
           {children}
         </div>
