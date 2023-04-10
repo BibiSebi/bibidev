@@ -1,38 +1,46 @@
-import { format } from 'date-fns';
-import { Blog } from 'contentlayer/generated';
-import Tags from '@/components/Tags';
-import { CalendarIcon } from '@heroicons/react/20/solid';
+import {format} from 'date-fns';
+import {Blog} from 'contentlayer/generated';
+import {CalendarIcon} from '@heroicons/react/20/solid';
+import {UsersIcon} from "@heroicons/react/20/solid";
 
 type BlogCardProps = {
-  blog: Blog;
+    blog: Blog;
 };
 type BlogCardFunc = (props: BlogCardProps) => JSX.Element;
 
-const BlogCard: BlogCardFunc = ({ blog }) => {
-  return (
-    <section className={'flex flex-1 flex-col rounded-xl border p-4'}>
-      <h2 className="text-xl">{blog.title}</h2>
-      <span className="flex">
-        <div className="flex gap-0.5">
-          <CalendarIcon width="24px" />
-          <time dateTime={blog.date}>
-            {format(new Date(blog.date), 'MMMM dd, yyyy')}
-          </time>
-        </div>
-      </span>
+const BlogCard: BlogCardFunc = ({blog}) => {
+    return (
+        <a
+            className='flex flex-1 rounded-md p-4 relative hover:bg-gray-100'
+            href={blog.url}
+            aria-label={`Read more about ${blog.title}`}
+        >
+        <section className={'flex flex-1 flex-col gap-1.5'}>
+                <h2 className="text-2xl font-semibold leading-6 text-gray-900 group-hover:text-gray-600">{blog.title}</h2>
+            <div className="flex gap-0.5 items-end flex-1 text-xs">
 
-      {blog.tags && <Tags tags={blog.tags} />}
-      <span>{blog.description}</span>
+                <CalendarIcon width="1rem"/>
+                <time dateTime={blog.date}>
+                    {format(new Date(blog.date), 'MMMM dd, yyyy')}
+                </time>
 
-      <a
-        className="flex flex-1 items-end justify-end font-bold text-pink-500"
-        href={blog.url}
-        aria-label={`Read more about ${blog.title}`}
-      >
-        Read more
-      </a>
-    </section>
-  );
+
+                |
+                <UsersIcon width='1rem'/>
+                <span>Bibiana Sebestianova</span>
+
+
+            </div>
+
+
+                <span>{blog.description}</span>
+
+            <span className='flex items-center font-semibold text-purple-800'>Read more</span>
+
+
+        </section>
+        </a>
+    );
 };
 
 export default BlogCard;

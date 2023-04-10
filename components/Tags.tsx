@@ -13,7 +13,7 @@ const Tags: TagsFunc = ({ tags }) => {
   return (
     <ul className="flex gap-1">
       {tags.map((tag, idx) => (
-        <li className="rounded-md bg-fuchsia-300 pl-1 pr-1" key={idx}>
+        <li className="rounded-full bg-gray-200 text-xs px-1.5 py-1 font-medium text-gray-600" key={idx}>
           {tag}
         </li>
       ))}

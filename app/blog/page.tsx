@@ -14,7 +14,7 @@ export default function Page() {
   };
 
   return (
-    <div>
+    <div className='pl-8 pr-8 md:pl-36 md:pr-36'>
       <BlogCardList allBlogs={sortBlogsByDate(allBlogs)} />
     </div>
   );
