@@ -1,7 +1,7 @@
 export default function Page() {
   return (
     <main className='relative flex flex-col gap-2 px-6 py-12 text-gray-800 lg:px-32'>
-      <h1 className='text-4xl font-bold'>About</h1>
+      <h1 className='text-4xl font-semibold'>About</h1>
       <section>
         <h2 className='text-2xl font-semibold'>Me</h2>
         <p>
