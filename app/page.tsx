@@ -1,5 +1,7 @@
 import BackgroundGradient from '@/components/icons/BackgroundGradient';
-
+export const metadata = {
+  title: 'Bibidev',
+};
 export default function Page() {
   return (
     <main className='relative flex min-h-full flex-1 overflow-hidden'>

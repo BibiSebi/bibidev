@@ -1,7 +1,10 @@
 import BlogCardList from '@/components/blog/BlogCardList';
 import { Blog, allBlogs } from 'contentlayer/generated';
 import { notFound } from 'next/navigation';
-import { ChevronLeftIcon } from '@heroicons/react/20/solid';
+
+export const metadata = {
+  title: 'Bibidev | Blog',
+};
 
 export default function Page() {
   if (!allBlogs || allBlogs.length <= 0) {

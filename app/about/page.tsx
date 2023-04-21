@@ -1,3 +1,6 @@
+export const metadata = {
+  title: 'Bibidev | About',
+};
 export default function Page() {
   return (
     <main className='relative flex flex-col gap-2 px-6 py-12 text-gray-800 lg:px-32'>
