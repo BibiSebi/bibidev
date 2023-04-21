@@ -1,4 +1,3 @@
-import { ChevronLeftIcon } from '@heroicons/react/20/solid';
 import { ReactNode } from 'react';
 
 type LayoutFun = (props: { children: ReactNode }) => JSX.Element;

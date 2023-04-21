@@ -1,4 +1,3 @@
-import BackgroundGradient from '@/components/icons/BackgroundGradient';
 export const metadata = {
   title: 'Bibidev',
 };

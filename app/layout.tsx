@@ -9,7 +9,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <head />
       <body className=' relative bg-white font-sans antialiased'>
         <div className='isolate flex min-h-screen flex-col'>
           <div
