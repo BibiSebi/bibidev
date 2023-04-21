@@ -11,7 +11,7 @@ type BlogCardFunc = (props: BlogCardProps) => JSX.Element;
 const BlogCard: BlogCardFunc = ({ blog }) => {
   return (
     <a
-      className='relative flex flex-1 rounded-md p-4 hover:bg-gray-100'
+      className='relative flex flex-1 rounded-md p-4 hover:bg-gray-800 hover:bg-opacity-5'
       href={blog.url}
       aria-label={`Read more about ${blog.title}`}
     >
