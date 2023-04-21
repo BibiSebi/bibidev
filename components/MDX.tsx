@@ -4,13 +4,13 @@ import CodeBlock from '@/components/common/CodeBlock';
 export const components = {
   h1: ({ ...props }) => (
     <h1
-      className='text-2xl font-extrabold tracking-tight text-slate-900 dark:text-slate-200 md:text-3xl'
+      className='text-2xl font-extrabold tracking-tight text-slate-900 md:text-3xl'
       {...props}
     />
   ),
   h2: ({ ...props }) => (
     <h2
-      className='text-xl font-extrabold tracking-tight text-slate-900 dark:text-slate-200 md:text-2xl'
+      className='text-xl font-extrabold tracking-tight text-slate-900 md:text-2xl'
       {...props}
     />
   ),

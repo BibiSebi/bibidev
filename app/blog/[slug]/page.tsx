@@ -20,7 +20,7 @@ export default async function PostPage({ params }: Props) {
   return (
     <div>
       <div className='flex px-4 pb-10 pt-8 lg:px-8'>
-        <div className='group flex text-sm font-semibold leading-6 text-slate-700 hover:text-slate-900 dark:text-slate-200 dark:hover:text-white'>
+        <div className='group flex text-sm font-semibold leading-6 text-slate-700 hover:text-slate-900'>
           <a className=' group link flex' href='/blog'>
             <ChevronLeftIcon className='h-6' />
             Go back
