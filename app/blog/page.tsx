@@ -15,7 +15,7 @@ export default function Page() {
   return (
     <div className='pl-8 pr-8 pt-12 md:pl-36 md:pr-36'>
       <div className='mb-5 '>
-        <h2 className='mb-2 text-2xl font-bold'>Welcome to my blog page</h2>
+        <h1 className='mb-2 text-2xl font-bold'>Welcome to my blog page</h1>
         <p>
           Follow me on my journey as a Fullstack Dev. In the following blog
           posts I will share my lessons learned, deep-dive into different

@@ -8,7 +8,7 @@ import {
 import { useState } from 'react';
 
 const navigation = [
-  { name: 'About me', href: '/about' },
+  { name: 'About', href: '/about' },
   { name: 'Blog', href: '/blog' },
 ];
 
@@ -36,7 +36,11 @@ const Menu = () => {
         </div>
         <div className='hidden gap-1 lg:flex'>
           {navigation.map((item) => (
-            <a key={item.name} href={item.href} className='btn-ghost btn'>
+            <a
+              key={item.name}
+              href={item.href}
+              className='btn-ghost btn normal-case '
+            >
               {item.name}
             </a>
           ))}
