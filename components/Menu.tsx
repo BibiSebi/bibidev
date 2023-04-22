@@ -10,6 +10,7 @@ import { useState } from 'react';
 const navigation = [
   { name: 'About', href: '/about' },
   { name: 'Blog', href: '/blog' },
+  { name: 'Roadmap', href: '/roadmap' },
 ];
 
 const Menu = () => {
