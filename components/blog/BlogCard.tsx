@@ -2,6 +2,7 @@ import { CalendarIcon } from '@heroicons/react/20/solid';
 import { UsersIcon } from '@heroicons/react/20/solid';
 import { Blog } from 'contentlayer/generated';
 import { format } from 'date-fns';
+import Tags from '@/components/Tags';
 
 type BlogCardProps = {
   blog: Blog;
@@ -16,9 +17,13 @@ const BlogCard: BlogCardFunc = ({ blog }) => {
       aria-label={`Read more about ${blog.title}`}
     >
       <section className={'flex flex-1 flex-col gap-1.5'}>
-        <h2 className='text-2xl font-semibold leading-6 text-gray-900 group-hover:text-gray-600'>
-          {blog.title}
-        </h2>
+        <div className='flex flex-wrap gap-2'>
+          <h2 className='text-2xl font-semibold leading-6 text-gray-900 group-hover:text-gray-600'>
+            {blog.title}
+          </h2>
+          <Tags tags={blog.tags} />
+        </div>
+
         <div className='flex flex-1 items-end gap-0.5 text-xs'>
           <CalendarIcon width='1rem' />
           <time dateTime={blog.date}>
