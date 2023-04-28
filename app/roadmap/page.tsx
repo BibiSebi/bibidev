@@ -1,5 +1,5 @@
 import process from 'process';
-import { LinearClient } from '@linear/sdk';
+import { LinearClient, WorkflowStateConnection } from '@linear/sdk';
 import { getWorkflowStateByIssue } from '@/helpers';
 
 export const metadata = {
@@ -8,9 +8,9 @@ export const metadata = {
 
 export default async function Page() {
   const apiKey = process.env.LINEAR_API_CLIENT_KEY;
-  const teamId = process.env.LINEAR_TEAM_ID;
+  const projectId = process.env.LINEAR_PROJECT_ID;
 
-  if (!apiKey || !teamId) {
+  if (!apiKey || !projectId) {
     return <span>Nothing found</span>;
   }
 
@@ -18,22 +18,13 @@ export default async function Page() {
     apiKey,
   });
 
-  const team = await linearClient.team(teamId);
-  const states = await team.states();
+  const project = await linearClient.project(projectId);
 
-  const roadmapIssues = await team.issues({
-    filter: {
-      labels: {
-        name: {
-          eq: 'Roadmap',
-        },
-      },
-    },
-  });
+  const states: WorkflowStateConnection = await linearClient.workflowStates();
+  const roadmapIssues = await project.issues();
 
   const mappedIssues = roadmapIssues.nodes.map((issue) => {
     const state = getWorkflowStateByIssue(issue, states);
-
     return {
       name: issue.title,
       id: issue.identifier,
