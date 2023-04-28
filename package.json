@@ -11,6 +11,7 @@
   "dependencies": {
     "@headlessui/react": "^1.7.11",
     "@heroicons/react": "^2.0.15",
+    "@linear/sdk": "^3.0.0",
     "@mdx-js/loader": "^2.3.0",
     "@mdx-js/react": "^2.3.0",
     "@next/font": "13.1.6",
@@ -21,8 +22,9 @@
     "contentlayer": "^0.3.0",
     "daisyui": "^2.51.5",
     "date-fns": "^2.29.3",
-    "next": "^13.3.0",
+    "next": "^13.3.1",
     "next-contentlayer": "^0.3.0",
+    "node-fetch": "^3.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rehype-pretty-code": "^0.9.4",

@@ -1,4 +1,4 @@
-import { Author } from '@/types/Blog';
+import { Author } from '@/types/blog';
 
 type AuthorCardProps = {
   author: Author;
