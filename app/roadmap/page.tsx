@@ -1,11 +1,14 @@
 import process from 'process';
-import { Issue, LinearClient, WorkflowStateConnection } from '@linear/sdk';
-import { getWorkflowStateByIssue } from '@/helpers';
+import {
+  LinearClient,
+  WorkflowState,
+  WorkflowStateConnection,
+} from '@linear/sdk';
+import { getIssuesForState } from '@/helpers';
 import Kanban from '@/app/roadmap/components/Kanban';
 import KanbanCardList from '@/app/roadmap/components/KanbanCardList';
 import KanbanCard from '@/app/roadmap/components/KanbanCard';
 
-export const revalidate = 10;
 export const metadata = {
   title: 'Bibidev | Roadmap',
 };
@@ -27,69 +30,60 @@ export default async function Page() {
   const states: WorkflowStateConnection = await linearClient.workflowStates();
   const roadmapIssues = await project.issues();
 
-  const mappedIssues = roadmapIssues.nodes.map((issue) => {
-    const state = getWorkflowStateByIssue(issue, states);
-
+  const mapState = (state: WorkflowState) => {
     return {
-      name: issue.title,
-      id: issue.identifier,
-      state: state?.name || '',
-      stateColor: state?.color || '',
-      type: state?.type || undefined,
+      name: state.name,
+      id: state.id,
+      color: state.color,
+      position: state.position,
     };
-  });
+  };
+
+  const roadmap = states.nodes.reduce((acc: any[], state) => {
+    if (
+      state.type === 'started' ||
+      state.type === 'completed' ||
+      state.type === 'unstarted'
+    ) {
+      const issues = getIssuesForState(roadmapIssues, state.id);
+      return [
+        ...acc,
+        {
+          ...mapState(state),
+          issues,
+        },
+      ];
+    }
+
+    return acc;
+  }, []);
+
+  const sortedRoadmap = roadmap.sort((a, b) =>
+    a.position > b.position ? 1 : -1
+  );
 
   return (
     <main className='relative flex w-screen flex-col gap-2 px-6 py-12 text-gray-800 lg:px-32'>
       <h1 className=' text-4xl font-semibold'>Roadmap</h1>
 
       <Kanban>
-        <KanbanCardList>
-          <KanbanCard />
-          <KanbanCard />
-          <KanbanCard />
-          <KanbanCard />
-          <KanbanCard />
-        </KanbanCardList>
-
-        <KanbanCardList>
-          <KanbanCard />
-          <KanbanCard />
-          <KanbanCard />
-          <KanbanCard />
-          <KanbanCard />
-        </KanbanCardList>
-
-        <KanbanCardList>
-          <KanbanCard />
-          <KanbanCard />
-          <KanbanCard />
-          <KanbanCard />
-          <KanbanCard />
-        </KanbanCardList>
-
-        <KanbanCardList>
-          <KanbanCard />
-          <KanbanCard />
-          <KanbanCard />
-          <KanbanCard />
-          <KanbanCard />
-        </KanbanCardList>
+        {sortedRoadmap.map((value, idx) => (
+          <KanbanCardList
+            key={`kanban-list-${idx}`}
+            title={value.name}
+            numberOfItems={value.issues.length}
+          >
+            {value.issues.map((issue: any) => (
+              <KanbanCard
+                key={`kanban-card-${idx}`}
+                title={issue.title}
+                id={issue.identifier}
+                createdAt={issue.createdAt}
+              />
+            ))}
+          </KanbanCardList>
+        ))}
       </Kanban>
     </main>
   );
 }
-
-const test = [
-  {
-    status: 'Done',
-    type: 'done',
-    issues: [
-      {
-        name: 'Design',
-      },
-    ],
-  },
-  {},
-  {},
-];

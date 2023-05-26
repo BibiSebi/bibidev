@@ -5,7 +5,7 @@ type KanbanBoardComponent = (props: {
 }) => JSX.Element;
 const KanbanBoard: KanbanBoardComponent = ({ children }) => {
   return (
-    <div className='flex grid grid-cols-1 overflow-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
+    <div className='flex grid grid-cols-1 overflow-auto sm:grid-cols-2 md:grid-cols-3 '>
       {children}
     </div>
   );
