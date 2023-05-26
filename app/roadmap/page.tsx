@@ -9,6 +9,7 @@ import Kanban from '@/app/roadmap/components/Kanban';
 import KanbanCardList from '@/app/roadmap/components/KanbanCardList';
 import KanbanCard from '@/app/roadmap/components/KanbanCard';
 
+export const revalidate = 10;
 export const metadata = {
   title: 'Bibidev | Roadmap',
 };
@@ -75,6 +76,7 @@ export default async function Page() {
           >
             {value.issues.map((issue: any) => (
               <KanbanCard
+                description={issue.description}
                 key={`kanban-card-${idx}`}
                 title={issue.title}
                 id={issue.identifier}
