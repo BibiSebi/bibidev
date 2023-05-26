@@ -23,7 +23,6 @@ export const getIssuesForState = (issues: IssueConnection, stateId: string) =>
       return acc;
     }
 
-    console.log(issue);
     return [
       ...acc,
       {
