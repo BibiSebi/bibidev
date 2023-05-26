@@ -12,7 +12,7 @@ type BlogCardFunc = (props: BlogCardProps) => JSX.Element;
 const BlogCard: BlogCardFunc = ({ blog }) => {
   return (
     <a
-      className='relative flex flex-1 rounded-md p-4 hover:bg-gray-800 hover:bg-opacity-5'
+      className='relative flex flex-1 rounded-md  p-5  hover:bg-gray-800 hover:bg-opacity-5'
       href={blog.url}
       aria-label={`Read more about ${blog.title}`}
     >
@@ -24,7 +24,8 @@ const BlogCard: BlogCardFunc = ({ blog }) => {
           <Tags tags={blog.tags} />
         </div>
 
-        <div className='flex flex-1 items-end gap-0.5 text-xs'>
+        <span>{blog.description}</span>
+        <div className='flex flex-1 items-end gap-0.5 text-xs font-medium text-gray-400'>
           <CalendarIcon width='1rem' />
           <time dateTime={blog.date}>
             {format(new Date(blog.date), 'MMMM dd, yyyy')}
@@ -33,10 +34,6 @@ const BlogCard: BlogCardFunc = ({ blog }) => {
           <UsersIcon width='1rem' />
           <span>Bibiana Sebestianova</span>
         </div>
-
-        <span>{blog.description}</span>
-
-        <span className='link-secondary link'>Read more</span>
       </section>
     </a>
   );
