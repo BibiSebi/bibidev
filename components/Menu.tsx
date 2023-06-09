@@ -11,6 +11,7 @@ const navigation = [
   { name: 'About', href: '/about' },
   { name: 'Blog', href: '/blog' },
   { name: 'Roadmap', href: '/roadmap' },
+  { name: 'Resources', href: '/resources' },
 ];
 
 const Menu = () => {
