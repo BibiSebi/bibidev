@@ -30,7 +30,6 @@ export default async function Page() {
 
   const states: WorkflowStateConnection = await linearClient.workflowStates();
   const roadmapIssues = await project.issues();
-
   const mapState = (state: WorkflowState) => {
     return {
       name: state.name,
