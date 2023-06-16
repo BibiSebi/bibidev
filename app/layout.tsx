@@ -1,6 +1,6 @@
 import './globals.css';
 import Menu from '@/components/Menu';
-import BackgroundGradient from '@/components/icons/BackgroundGradient';
+import BackgroundGradient from '@/components/BackgroundGradient';
 
 export default function RootLayout({
   children,
