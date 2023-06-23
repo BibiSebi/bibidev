@@ -49,6 +49,14 @@ const Resource = defineDocumentType(() => ({
   name: 'Resource',
   filePathPattern: './resources/**/*.mdx',
   contentType: 'mdx',
+  fields: {
+    order: {
+      type: 'number',
+      description: 'Order inside a page',
+      required: false,
+      default: 0,
+    },
+  },
 }));
 
 export default makeSource({
