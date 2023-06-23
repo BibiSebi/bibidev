@@ -7,12 +7,23 @@ export const metadata = {
 };
 export default function Page() {
   return (
-    <main className='relative flex flex-col gap-2 px-14 py-14 text-gray-800 lg:px-64'>
-      <section className='flex flex-col gap-2'>
+    <main className='relative flex flex-col gap-2 px-14 py-14 text-gray-800 md:px-32 lg:px-64'>
+      <section className='flex flex-col items-center gap-2'>
         <div
-          className='flex items-end gap-4
+          className='flex flex-col items-end items-center gap-2
        '
         >
+          <div className='relative'>
+            <img
+              alt='profile picture'
+              src='https://avatars.githubusercontent.com/u/17590227'
+              className=' h-32 w-32 rounded-full bg-pink-400'
+            ></img>
+            <div className='absolute bottom-3 right-2 flex items-center justify-center rounded-full bg-white px-1 shadow-lg'>
+              🌸
+            </div>
+          </div>
+
           <h1 className='text-4xl font-semibold'>BibiSebi</h1>
           <div className='flex gap-2 pb-1.5'>
             <a
@@ -37,8 +48,11 @@ export default function Page() {
               <TwitterIcon />
             </a>
           </div>
+          <p className='text-center md:px-24'>
+            Passionate Full Stack Developer dedicated to crafting clean code and
+            prioritizing accessibility in every digital solution.{' '}
+          </p>
         </div>
-        <p>Hey,</p>
       </section>
 
       <hr className='my-4 flex-1 border-purple-800 border-opacity-10' />
@@ -59,8 +73,14 @@ export default function Page() {
               The BibiDev website was established as a platform for me to share
               the knowledge I have gained throughout my career, as well as
               insights from my personal life. This project incorporates Next.js,
-              Tailwind CSS, Contentlayer, and draws inspiration from the
-              shadcn/ui library for certain components.
+              Tailwind CSS, Contentlayer, and draws inspiration from the{' '}
+              <a
+                className='border-b border-b-blue-500 font-semibold text-black'
+                href='https://ui.shadcn.com/'
+              >
+                shadcn/ui
+              </a>{' '}
+              library for certain components.
             </p>
           </li>
 
