@@ -7,7 +7,7 @@ export const metadata = {
 };
 export default function Page() {
   return (
-    <main className='relative flex flex-col gap-2 px-14 py-14 text-gray-800 md:px-32 lg:px-64'>
+    <main className='relative flex flex-col px-14 py-14 text-gray-800 md:px-32 lg:px-64'>
       <section className='flex flex-col items-center gap-2'>
         <div
           className='flex flex-col items-end items-center gap-2
