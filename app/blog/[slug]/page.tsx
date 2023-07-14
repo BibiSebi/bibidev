@@ -2,16 +2,34 @@ import { MDX } from '@/components/MDX';
 import { allBlogs } from 'contentlayer/generated';
 import { notFound } from 'next/navigation';
 import { ChevronLeftIcon } from '@heroicons/react/20/solid';
+import { Metadata, ResolvingMetadata } from 'next';
 
 type Props = {
   params: {
     slug: string;
   };
+  searchParams: { [key: string]: string | string[] | undefined };
 };
 
-export default async function PostPage({ params }: Props) {
+export async function generateMetadata(
+  { params, searchParams }: Props,
+  parent?: ResolvingMetadata
+): Promise<Metadata> {
+  const blog = getBlogBySlug(params.slug);
+
+  if (!blog) {
+    return {
+      title: 'Blog',
+    };
+  }
+  return {
+    title: `Blog | ${blog.title}`,
+  };
+}
+
+export default async function BlogPage({ params }: Props) {
   const slug = params?.slug;
-  const blog = allBlogs.find((blog) => blog.slug === slug);
+  const blog = getBlogBySlug(slug);
 
   if (!blog) {
     notFound();
@@ -33,3 +51,6 @@ export default async function PostPage({ params }: Props) {
     </div>
   );
 }
+
+const getBlogBySlug = (slug: string) =>
+  allBlogs.find((blog) => blog.slug === slug);
