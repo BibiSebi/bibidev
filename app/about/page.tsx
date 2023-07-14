@@ -106,6 +106,47 @@ export default function Page() {
       <hr className='my-4 flex-1 border-purple-800 border-opacity-10' />
 
       <section className='flex flex-col gap-2'>
+        <h2 className='text-2xl font-semibold'>Public Speaking</h2>
+        <ul className='flex flex-col gap-2'>
+          <li>
+            <h3 className='text-xl font-semibold'>
+              <a
+                href='https://www.storyblok.com/ev/headless-in-times-of-accessibility'
+                className='border-b border-b-blue-500 font-semibold text-black'
+              >
+                Webinar: Headless in times of Accessibility
+              </a>
+            </h3>
+            <p className='text-small text-gray-500'>
+              An initiative to educate people on how to integrate accessibility
+              into their day to day life. The webinar focused on different
+              project roles such as designers, developers and content creators
+              explaining what responsibility they carry in creating and
+              accessible web experience.
+            </p>
+          </li>
+
+          <li>
+            <h3 className='text-xl font-semibold'>
+              <a
+                href='https://www.meetup.com/vuejsvienna/events/290494487/'
+                className='border-b border-b-blue-500 font-semibold text-black'
+              >
+                Vue.js Vienna: Let me change your Vue on Accessibility
+              </a>
+            </h3>
+            <p className='text-small text-gray-500'>
+              An introduction to what Accessibility is, including examples with
+              Vue but also tools every developer can use on a daily basis to
+              catch accessibility issues while developing.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <hr className='my-4 flex-1 border-purple-800 border-opacity-10' />
+
+      <section className='flex flex-col gap-2'>
         <h2 className='text-2xl font-semibold'>Posts</h2>
         <span>In Progress 🏗️</span>
       </section>
