@@ -16,18 +16,18 @@ export const components = {
   ),
   a: ({ ...props }) => (
     <a
-      className='border-b border-b-blue-500 font-semibold text-black'
+      className='border-b border-b-blue-500  font-semibold text-black'
       {...props}
     />
   ),
   img: ({ ...props }) => (
     <img
       {...props}
-      className='not-prose relative my-[2em] overflow-hidden rounded-lg first:mt-0 last:mb-0'
+      className='not-prose relative my-[2em] overflow-hidden rounded-lg  first:mt-0 last:mb-0'
     />
   ),
   p: ({ ...props }) => <p className='mb-5 mt-5' {...props} />,
-  code: ({ ...props }) => <CodeBlock {...props} />,
+  pre: ({ ...props }) => <CodeBlock {...props} />,
 };
 
 interface MdxProps {
