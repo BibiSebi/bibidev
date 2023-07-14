@@ -17,7 +17,7 @@ export default function Page() {
 
   return (
     <div className='pl-8 pr-8 pt-12 md:pl-36 md:pr-36'>
-      <div className='mb-5 '>
+      <div className='mb-8'>
         <h1 className='mb-2 text-4xl font-semibold'>
           Welcome to my blog page 👋
         </h1>

@@ -7,9 +7,9 @@ type BlogCardListProps = {
 type BlogCardListFunc = (props: BlogCardListProps) => JSX.Element;
 const BlogCardList: BlogCardListFunc = ({ allBlogs }) => {
   return (
-    <ol className='grid auto-cols-auto grid-cols-1 '>
+    <ol className='gap-2 border-gray-100  p-2  '>
       {allBlogs.map((blog, idx) => (
-        <li className='flex py-2' key={`blog-${idx}-id`}>
+        <li className='flex flex-1' key={`blog-${idx}-id`}>
           <BlogCard blog={blog} />
         </li>
       ))}
