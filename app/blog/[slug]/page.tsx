@@ -28,6 +28,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: 'Open graph test description',
       images: ['/logo.png'],
     },
+    twitter: {
+      card: 'summary',
+    },
   };
 }
 
