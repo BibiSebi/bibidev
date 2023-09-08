@@ -34,6 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: 'summary_large_image',
       title: `Blog | ${blog.title}`,
       description: 'Twitter test description',
+      images: ['/logo.png'],
     },
   };
 }
