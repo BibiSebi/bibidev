@@ -1,11 +1,8 @@
 'use client';
 import { Dialog } from '@headlessui/react';
-import {
-  Bars3Icon,
-  XMarkIcon,
-  LightBulbIcon,
-} from '@heroicons/react/24/outline';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
+import Image from 'next/image';
 
 const navigation = [
   { name: 'About', href: '/about' },
@@ -22,7 +19,7 @@ const Menu = () => {
       <nav className='flex items-center ' aria-label='Navigation Menu'>
         <div className='flex flex-1'>
           <a href='/' className='btn-ghost btn gap-0.5 text-xl normal-case'>
-            <LightBulbIcon className='h-6 w-6' />
+            <Image alt='' src='/logo.png' width={26} height={26} />
             BibiDev
           </a>
         </div>
