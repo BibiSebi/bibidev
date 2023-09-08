@@ -24,6 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `Blog | ${blog.title}`,
     description: 'Test',
     openGraph: {
+      type: 'website',
       url: 'https://bibidev.vercel.app/blog/values',
       title: `Blog | ${blog.title}`,
       description: 'Open graph test description',
