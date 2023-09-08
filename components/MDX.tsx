@@ -14,6 +14,12 @@ export const components = {
       {...props}
     />
   ),
+  h3: ({ ...props }) => (
+    <h3
+      className='text-lg font-bold tracking-tight text-slate-900 md:text-xl'
+      {...props}
+    />
+  ),
   a: ({ ...props }) => (
     <a
       className='border-b border-b-blue-500  font-semibold text-black'
@@ -28,6 +34,12 @@ export const components = {
   ),
   p: ({ ...props }) => <p className='mb-5 mt-5' {...props} />,
   pre: ({ ...props }) => <CodeBlock {...props} />,
+  blockquote: ({ ...props }) => (
+    <blockquote
+      className='rounded border border-purple-600  px-4 py-0.5 italic'
+      {...props}
+    />
+  ),
 };
 
 interface MdxProps {
