@@ -35,6 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: `Blog | ${blog.title}`,
       description: 'Twitter test description',
       images: ['/logo.png'],
+      creator: '@BibianaSebi',
     },
   };
 }
