@@ -34,6 +34,7 @@ export const components = {
   ),
   p: ({ ...props }) => <p className='mb-5 mt-5' {...props} />,
   pre: ({ ...props }) => <CodeBlock {...props} />,
+  ul: ({ ...props }) => <ul className='list-inside list-disc' {...props} />,
   blockquote: ({ ...props }) => (
     <blockquote
       className='rounded border border-purple-600  px-4 py-0.5 italic'
