@@ -2,7 +2,7 @@
 import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
-import Image from 'next/image';
+import { LightBulbIcon } from '@heroicons/react/24/outline';
 
 const navigation = [
   { name: 'About', href: '/about' },
@@ -15,11 +15,11 @@ const Menu = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className='px-6 pt-6 lg:px-8'>
+    <div className='px-6 pt-6 print:hidden lg:px-8'>
       <nav className='flex items-center ' aria-label='Navigation Menu'>
         <div className='flex flex-1'>
           <a href='/' className='btn-ghost btn gap-0.5 text-xl normal-case'>
-            <Image alt='' src='/logo.png' width={26} height={26} />
+            <LightBulbIcon width={26} height={26} />
             BibiDev
           </a>
         </div>
