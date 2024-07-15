@@ -1,8 +1,9 @@
 import LinkedInIcon from '@/components/icons/LinkedInIcon';
 import GitHubIcon from '@/components/icons/GitHub';
 import TwitterIcon from '@/components/icons/TwitterIcon';
-import { CalendarIcon, WrenchScrewdriverIcon } from '@heroicons/react/20/solid';
-import { format } from 'date-fns';
+import { Link } from '@/app/components/Link';
+import { DateFromTo } from '@/app/components/DateFromTo';
+import { Tools } from '@/app/components/Tools';
 
 export const metadata = {
   title: 'Bibidev | About',
@@ -21,7 +22,7 @@ export default function Page() {
               src='https://avatars.githubusercontent.com/u/17590227'
               className=' h-32 w-32 rounded-full bg-pink-400'
             ></img>
-            <div className='absolute bottom-3 right-2 flex h-6 w-6 items-center  rounded-full bg-white px-1 shadow-lg'>
+            <div className='absolute bottom-3 right-2 flex h-6 w-6 items-center rounded-full bg-white px-1 '>
               👩🏼‍💻
             </div>
           </div>
@@ -51,8 +52,9 @@ export default function Page() {
             </a>
           </div>
           <p className='text-center md:px-24'>
-            Passionate Full Stack Developer dedicated to crafting clean code and
-            prioritizing accessibility in every digital solution.{' '}
+            Fullstack engineer passionate about clean coding practices and
+            committed to enhancing both developer and user experiences through
+            innovative solutions.
           </p>
         </div>
       </section>
@@ -66,42 +68,50 @@ export default function Page() {
               Fullstack Engineer at Storyblok
             </h3>
             <div className='mb-2 flex flex-1 items-end gap-1 text-xs '>
-              <CalendarIcon width='1rem' />
-              <time>{format(new Date('2021-03-01'), 'MMMM yyyy')}</time>-
-              <span>present</span>
-              <WrenchScrewdriverIcon width='1rem' />
-              <ul className='flex gap-0.5'>
-                <li>Typescript</li>| <li>Javascript</li>|<li>React</li>|
-                <li>Next</li>|<li>Nuxt</li>|<li>Node</li>
-              </ul>
+              <DateFromTo from={new Date('2021-03-01')} />
+              <Tools
+                tools={[
+                  'Typescript',
+                  'Javascript',
+                  'React',
+                  'Next',
+                  'Vue 3',
+                  'Nuxt 3',
+                  'Node',
+                ]}
+              />
             </div>
             <ul className='list-inside list-disc'>
               <li>
-                Developed high-demand integrations, resulting in the acquisition
-                of new customers
-              </li>
-              <li>Provided support to customers in solution development</li>
-              <li>
-                Contributed to the creation of the{' '}
-                <a
-                  className='border-b border-b-blue-500 font-semibold text-black'
-                  href='https://github.com/storyblok/field-plugin'
-                >
-                  Field Plugin SDK
-                </a>
+                <b>Lead multiple high-demand integration projects</b>, resulting
+                in the acquisition of new enterprise customers.
               </li>
               <li>
-                Contributed to creation of plugin starters to offer developers a
-                straightforward method for creating plugins
+                Provided <b>technical solution engineering</b> to several
+                technical partners resulting in new partnerships.
               </li>
               <li>
-                Orchestrated task management and delivery, including coaching
-                and enforcement of Scrum practices
+                Contributed to several open source projects by introducing{' '}
+                <b>developer experience improvements</b> around the integration
+                development and deployment process.
+                <ul className='list-inside pl-6'>
+                  <li>
+                    <Link href='https://github.com/storyblok/field-plugin'>
+                      Field Plugin SDK
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href=''>Plugin Starters</Link>
+                  </li>
+                  <li>
+                    <Link href=''>Plugin Authentication Library</Link>
+                  </li>
+                </ul>
               </li>
-              <li>Scoped features and delegated tasks within the team</li>
               <li>
-                Facilitated communication and collaboration across multiple
-                teams
+                Lead <b>task management, requirements engineering </b> and
+                delivery for the team of 3 people, including coaching and
+                enforcement of Scrum practices
               </li>
             </ul>
           </li>
@@ -110,100 +120,36 @@ export default function Page() {
               User Experience Engineer at Accenture
             </h3>
             <div className='mb-2 flex flex-1 items-end gap-1 text-xs'>
-              <CalendarIcon width='1rem' />
-              <time>{format(new Date('2020-01-01'), 'MMMM yyyy')}</time>-
-              <time>{format(new Date('2022-03-01'), 'MMMM yyyy')}</time>
-              <WrenchScrewdriverIcon width='1rem' />
-              <ul className='flex gap-0.5'>
-                <li>Typescript</li>|<li>Javascript</li>|<li>React</li>|
-                <li>Angular</li>|<li>Nest.js</li>|<li>Node</li>
-              </ul>
+              <DateFromTo
+                from={new Date('2020-01-01')}
+                to={new Date('2022-03-01')}
+              />
+
+              <Tools
+                tools={[
+                  'Typescript',
+                  'Javascript',
+                  'React',
+                  'Angular',
+                  'Nest.js',
+                  'Node',
+                ]}
+              />
             </div>
             <ul className='list-inside list-disc'>
               <li>
-                Managed frontend and backend task coordination to streamline
+                Lead frontend and backend task coordination to streamline
                 delivery timelines
               </li>
               <li>
-                Facilitated distribution of Accessibility knowledge through
-                presentations and workshops
+                <b>Facilitated distribution of Accessibility knowledge</b>{' '}
+                through presentations and workshops
               </li>
               <li>
                 Established and communicated Accessibility requirements with
                 clients
               </li>
-              <li>Assisted in the onboarding process of new team members</li>
             </ul>
-          </li>
-        </ul>
-      </section>
-
-      <section className='flex hidden flex-col gap-2'>
-        <h2 className='text-2xl font-semibold'>Education</h2>
-        <ul>
-          <li>
-            <h3 className='text-xl font-semibold'>HTL Spengergasse</h3>
-            <div className='mb-2 flex flex-1 items-end gap-0.5 text-xs'>
-              <CalendarIcon width='1rem' />
-              <time>{format(new Date('2014-09-01'), 'MMMM yyyy')}</time>-
-              <time>{format(new Date('2019-07-01'), 'MMMM yyyy')}</time>
-            </div>
-
-            <p>
-              I was enrolled in a bilingual class that not only emphasized
-              informatics but also focused on project management and accounting.
-              During my final year at school, I completed my diploma thesis,
-              exploring the applications of prediction, machine learning, and AI
-              across various fields.
-            </p>
-          </li>
-        </ul>
-      </section>
-
-      <hr className='my-4 flex-1 border-purple-800 border-opacity-10' />
-
-      <section className='flex flex-col gap-2'>
-        <h2 className='text-2xl font-semibold'>Personal Projects</h2>
-        <ul className='flex flex-col gap-2'>
-          <li>
-            <h3 className='text-xl font-semibold'>
-              <a
-                href='https://github.com/BibiSebi/bibidev'
-                className=' border-b border-b-blue-500 font-semibold text-black'
-              >
-                BibiDev
-              </a>
-            </h3>
-            <p className='text-small '>
-              The BibiDev website was established as a platform for me to share
-              the knowledge I have gained throughout my career, as well as
-              insights from my personal life. This project incorporates Next.js,
-              Tailwind CSS, Contentlayer, and draws inspiration from the{' '}
-              <a
-                className='border-b border-b-blue-500 font-semibold text-black'
-                href='https://ui.shadcn.com/'
-              >
-                shadcn/ui
-              </a>{' '}
-              library for certain components.
-            </p>
-          </li>
-
-          <li>
-            <h3 className='text-xl font-semibold'>
-              <a
-                href='https://github.com/BibiSebi/would-you-rather'
-                className='border-b border-b-blue-500 font-semibold text-black'
-              >
-                Would You Rather
-              </a>
-            </h3>
-            <p className='text-small'>
-              Two years ago, I developed a project called Would You Rather while
-              learning React. This project is a straightforward game featuring
-              questions where users can choose between two options, indicating
-              their preference.
-            </p>
           </li>
         </ul>
       </section>
@@ -215,12 +161,9 @@ export default function Page() {
         <ul className='flex flex-col gap-2'>
           <li>
             <h3 className='text-xl font-semibold'>
-              <a
-                href='https://www.storyblok.com/ev/headless-in-times-of-accessibility'
-                className='border-b border-b-blue-500 font-semibold text-black'
-              >
+              <Link href='https://www.storyblok.com/ev/headless-in-times-of-accessibility'>
                 Webinar: Headless in times of Accessibility
-              </a>
+              </Link>
             </h3>
             <p className='text-small'>
               An initiative to educate people on how to integrate accessibility
@@ -233,17 +176,104 @@ export default function Page() {
 
           <li>
             <h3 className='text-xl font-semibold'>
-              <a
-                href='https://www.meetup.com/vuejsvienna/events/290494487/'
-                className='border-b border-b-blue-500 font-semibold text-black'
-              >
+              <Link href='https://www.meetup.com/vuejsvienna/events/290494487/'>
                 Vue.js Vienna: Let me change your Vue on Accessibility
-              </a>
+              </Link>
             </h3>
             <p className='text-small'>
               An introduction to what Accessibility is, including examples with
               Vue but also tools every developer can use on a daily basis to
               catch accessibility issues while developing.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <hr className='my-4 flex-1 border-purple-800 border-opacity-10' />
+
+      <section className='flex flex-col gap-2'>
+        <h2 className='text-2xl font-semibold'>Personal Projects</h2>
+        <ul className='flex flex-col gap-2'>
+          <li>
+            <h3 className='text-xl font-semibold'>
+              <Link href='https://github.com/BibiSebi/vercel-bisect'>
+                Visual Vercel Bisect
+              </Link>
+            </h3>
+            <p className='text-small '>
+              An extension to{' '}
+              <a href='https://vercel.com/docs/cli/bisect'>
+                Vercel's bisect command
+              </a>
+              . This project was a fun idea with the purpose to improve the{' '}
+              <b>user experience </b> by providing a visual representation of
+              the deployments where the user could - in a gamified way - find
+              out in which exact release a bug was introduced. Me and my project
+              partner recreated the bisect logic from scratch by using the{' '}
+              <b>binary search algorithm.</b>
+            </p>
+          </li>
+
+          <li>
+            {/*Add hackathon with laurenz*/}
+            <h3 className='text-xl font-semibold'>
+              <Link href='https://github.com/BibiSebi/bibidev'>BibiDev</Link>
+            </h3>
+            <p className='text-small '>
+              The BibiDev website was established as a platform for me to share
+              the knowledge I have gained throughout my career, as well as
+              insights from my personal life. This project incorporates Next.js,
+              Tailwind CSS, Contentlayer, and draws inspiration from the{' '}
+              <Link href='https://ui.shadcn.com/'>shadcn/ui</Link> library for
+              certain components.
+            </p>
+          </li>
+
+          <li>
+            <h3 className='text-xl font-semibold'>
+              <Link href='https://github.com/BibiSebi/would-you-rather'>
+                Would You Rather
+              </Link>
+            </h3>
+            <p className='text-small'>
+              Two years ago, I developed a project called Would You Rather while
+              learning React. This project is a straightforward game featuring
+              questions where users can choose between two options, indicating
+              their preference.
+            </p>
+          </li>
+        </ul>
+      </section>
+      <hr className='my-4 flex-1 border-purple-800 border-opacity-10' />
+
+      <section className='flex  hidden flex-col gap-2'>
+        <h2 className='text-2xl font-semibold'>Education</h2>
+        <ul>
+          <li>
+            <h3 className='text-xl font-semibold'>HTL Spengergasse</h3>
+            <div className='mb-2 flex flex-1 flex-wrap items-end gap-0.5 text-xs'>
+              <DateFromTo
+                from={new Date('2014-09-01')}
+                to={new Date('2019-07-01')}
+              />
+
+              <Tools
+                tools={[
+                  'Typescript',
+                  'Angular',
+                  'Java',
+                  'Project Management',
+                  'Accounting',
+                ]}
+              />
+            </div>
+
+            <p>
+              I was enrolled in a bilingual class that not only emphasized
+              informatics but also focused on project management and accounting.
+              During my final year at school, I completed my diploma thesis,
+              exploring the applications of prediction, machine learning, and AI
+              across various fields.
             </p>
           </li>
         </ul>
