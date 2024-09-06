@@ -12,7 +12,7 @@ export default function RootLayout({
       <body className=' relative bg-white font-sans antialiased'>
         <div className='isolate flex min-h-screen flex-col'>
           <div
-            className='absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]'
+            className='absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl print:hidden sm:top-[-20rem]'
             aria-hidden='true'
           >
             <BackgroundGradient
